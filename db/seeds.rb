@@ -16,8 +16,8 @@ ingredients = JSON.parse(open('http://www.thecocktaildb.com/api/json/v1/1/list.p
 
 puts 'seeding the database with ingredients…'
 
-10.times do
-  ingredient = Ingredient.new(name: ingredients[Random.new.rand(160)][:strIngredient1])
+ingredients['drinks'].each do |ingredient|
+  ingredient = Ingredient.new(name: ingredient['strIngredient1'])
   ingredient.save!
 end
 

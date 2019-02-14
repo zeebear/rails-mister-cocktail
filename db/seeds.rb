@@ -5,6 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
+require 'open-uri'
+require 'json'
+
+ingredients = JSON.parse(open('http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').read)
+
+# Ingredient.create(name: "lemon")
+# Ingredient.create(name: "ice")
+# Ingredient.create(name: "mint leaves")
+
+puts 'seeding the database with ingredients…'
+
+10.times do
+  ingredient = Ingredient.new(name: ingredients[Random.new.rand(160)][:strIngredient1])
+  ingredient.save!
+end
+
+puts 'finished seeding the database with ingredients'

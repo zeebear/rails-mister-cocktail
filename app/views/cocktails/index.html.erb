@@ -1,6 +1,8 @@
-<h1>My amazing cocktails</h1>
+<h1>Check out my amazing cocktails</h1>
 <ul>
   <% @cocktails.each do |cocktail| %>
-  <li><%= path_to cocktail.name, cocktail_path(cocktail.id) %></li>
+  <li><%= link_to cocktail.name.capitalize, cocktail_path(cocktail.id) %></li>
   <% end %>
 </ul>
+
+<p><%= link_to "Create a new cocktail", new_cocktail_path %></p>

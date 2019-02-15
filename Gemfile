@@ -67,3 +67,5 @@ gem 'simple_form'
 
 # gem 'bundler', '~> 2.0', '>= 2.0.1'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'

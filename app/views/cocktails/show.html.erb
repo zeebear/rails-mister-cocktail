@@ -1,15 +1,20 @@
-<h1>Cocktail: <% @cocktail.name.split(" ").each do |word| %>
-   <% word.capitalize %>
-   <%= word + " "%>
- <% end%>
-</h1>
+<div class="container" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path "samuel-zeller-487534-unsplash.jpg" %>);">
+  <div class="row">
+    <div class="col-xs-12"><h1>Cocktail: <% @cocktail.name.split(" ").each do |word| %>
+     <% word.capitalize %>
+     <%= word + " "%>
+     <% end%>
+   </h1>
 
-<p><%= cl_image_tag @cocktail.photo, height: 400, width: 600, crop: :fill %></p>
-<p>Here are the ingredients for this cocktail</p>
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-  <li><%= dose.ingredient.name %>: <%= dose.description %> (<%= link_to "Delete this ingredient", dose_path(dose), method: :delete, data: { confirm: "Are you sure you want to delete this ingredient?"} %>)</li>
-  <% end %>
-</ul>
-<p><%= link_to "Add an ingredient to this cocktail", new_cocktail_dose_path(@cocktail) %></p>
-<p><%= link_to "Go back to the cocktails list", cocktails_path %></p>
+   <p><%= cl_image_tag @cocktail.photo, height: 400, width: 600, crop: :fill %></p>
+   <p>Here are the ingredients for this cocktail</p>
+   <ul>
+    <% @cocktail.doses.each do |dose| %>
+    <li><%= dose.ingredient.name %>: <%= dose.description %> (<%= link_to "Delete this ingredient", dose_path(dose), method: :delete, data: { confirm: "Are you sure you want to delete this ingredient?"} %>)</li>
+    <% end %>
+  </ul>
+  <p><%= link_to "Add an ingredient to this cocktail", new_cocktail_dose_path(@cocktail) %></p>
+  <p><%= link_to "Go back to the cocktails list", cocktails_path %></p>
+</div>
+</div>
+</div>

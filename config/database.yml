@@ -17,9 +17,10 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  pool: 5
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
@@ -78,8 +79,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: rails-mister-cocktail_production
-  username: rails-mister-cocktail
-  password: <%= ENV['RAILS-MISTER-COCKTAIL_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: rails-mister-cocktail_production
+#   username: rails-mister-cocktail
+#   password: <%= ENV['RAILS-MISTER-COCKTAIL_DATABASE_PASSWORD'] %>

@@ -5,11 +5,15 @@
   <div class="row">
     <ul>
       <% @cocktails.each do |cocktail| %>
-      <div class = "col-xs-12 col-sm-6 col-md-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));">>
-          <li class="card-description"><h2><%= link_to cocktail.name.capitalize, cocktail_path(cocktail.id) %></h2></li>
+        <% cocktail_name_array = cocktail.name.split(" ").each do |word| %>
+          <% word.capitalize %>
+        <% end %>
+        <% cocktail_name = cocktail_name_array.join(" ") %>
+        <div class = "col-xs-12 col-sm-6 col-md-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));">>
+            <li class="card-description"><h2><%= link_to cocktail_name, cocktail_path(cocktail.id) %></h2></li>
+          </div>
         </div>
-      </div>
       <% end %>
     </ul>
   </div>

@@ -1,6 +1,10 @@
-<h1>Cocktail: <%= @cocktail.name.capitalize %></h1>
+<h1>Cocktail: <% @cocktail.name.split(" ").each do |word| %>
+   <% word.capitalize %>
+   <%= word + " "%>
+ <% end%>
+</h1>
 
-<p><%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %></p>
+<p><%= cl_image_tag @cocktail.photo, height: 400, width: 600, crop: :fill %></p>
 <p>Here are the ingredients for this cocktail</p>
 <ul>
   <% @cocktail.doses.each do |dose| %>

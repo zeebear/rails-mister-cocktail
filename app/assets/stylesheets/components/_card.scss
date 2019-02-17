@@ -8,18 +8,11 @@
   background-position: center;
   border: 1px solid grey;
   // display: flex;
-  flex-direction: column;
-    a {
-      color: white;
-      a :hover {
-        color: pink;
-        decoration: none;
-      }
+  a {
+    color: white;
+    a :hover {
+      color: pink;
+      decoration: none;
     }
-}
-
-.cards {
-  // position: relative;
-  top: 90px;
-  display: flex;
+  }
 }

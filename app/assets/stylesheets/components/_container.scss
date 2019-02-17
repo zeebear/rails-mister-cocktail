@@ -1,13 +1,15 @@
 .container {
   // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
   background-image: image-url("right_side2.jpg");
-  background-color: $light-gray;
-  // background-size: contain;
+  background-color: fuchsia;
   background-repeat: no-repeat;
   background-size: cover;
+  // background-attachment: fixed;
   height: 100vh;
-  // background-position: center;
-  position: relative;
+  // position: sticky;
+  // float: right;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {

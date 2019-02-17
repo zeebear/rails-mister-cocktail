@@ -1,13 +1,13 @@
 .card {
   height: 200px;
-  width: auto;
+  width: 300px;
   list-style-type: none;
   background-color: black;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid grey;
-  display: flex;
+  // display: flex;
   flex-direction: column;
     a {
       color: white;
@@ -16,4 +16,10 @@
         decoration: none;
       }
     }
+}
+
+.cards {
+  position: relative;
+  top: 90px;
+  display: flex;
 }

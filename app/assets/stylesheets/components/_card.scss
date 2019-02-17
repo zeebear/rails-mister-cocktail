@@ -1,12 +1,14 @@
 .card {
   height: 200px;
-  width: 300px;
+  width: auto;
   list-style-type: none;
   background-color: black;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
     a {
       color: white;
       a :hover {

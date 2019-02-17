@@ -5,4 +5,13 @@
   flex-direction: column;
   justify-content: space-around;
   flex: 1 1 auto;
+  width: 67%;
+}
+
+@media(max-width: 720px) {
+  .cards {
+    width: 126.667px;
+    margin: 0;
+    flex: 1 1 auto;
+  }
 }

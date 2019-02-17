@@ -12,3 +12,14 @@
   top: 0;
   // right: 0;
 }
+
+@media(max-width: 720px) {
+  #main_image {
+  flex: 1 0 auto;
+  position: sticky; /* !important to override Gmaps inline CSS */
+  top: 0;
+  /*width: 60%;*/
+  height: 100vh;
+  }
+}
+

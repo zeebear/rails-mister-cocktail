@@ -1,0 +1,13 @@
+#main_image {
+  // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+  background-image: image-url("right_side2_crop.jpg");
+  background-color: fuchsia;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-attachment: fixed;
+  // position: fixed; bottom: 0; right: 0;
+  flex: 0 0 450px;
+  height: 100vh;
+  position: sticky;
+  top: 0; right: 0;
+}

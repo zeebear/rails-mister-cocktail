@@ -9,5 +9,14 @@
   justify-content: space-around;
   position: absolute;
   top: 0;
-  // flex: 0 0 100%;
+  flex: 1 1 100%;
 }
+
+@media(max-width: 720px) {
+  .navbar {
+    width: 126.667px;
+    margin: 0;
+    flex: 1 1 auto;
+  }
+}
+

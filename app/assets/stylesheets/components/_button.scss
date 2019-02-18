@@ -1,0 +1,32 @@
+.popup {
+  // background: (255, 255, 255, 0.1);
+  border: 1px dotted white;
+  color: white;
+  margin: 30px;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup:before, .popup:after {
+  content: "";
+  position: absolute;
+  border: 1px dotted white;
+  top: 0;
+  left: 0;
+  height: 120px;
+  width: 120px;
+  // background: (255, 255, 255, 0.8);
+  }
+
+.popup:before {
+  transform: rotate(30deg);
+  }
+
+.popup:after {
+  transform: rotate(60deg);
+}

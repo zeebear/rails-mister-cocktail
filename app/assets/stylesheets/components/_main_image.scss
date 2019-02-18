@@ -4,21 +4,21 @@
   background-color: fuchsia;
   background-repeat: no-repeat;
   background-size: cover;
-  // background-attachment: fixed;
-  // position: fixed; bottom: 0; right: 0;
   flex: 0 0 33%;
   height: 100vh;
   position: sticky;
   top: 0;
-  // right: 0;
+  // for button alignment:
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 @media(max-width: 720px) {
   #main_image {
   flex: 1 0 auto;
-  position: sticky; /* !important to override Gmaps inline CSS */
+  position: sticky;
   top: 0;
-  /*width: 60%;*/
   height: 100vh;
   }
 }
